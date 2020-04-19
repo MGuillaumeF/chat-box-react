@@ -1,10 +1,11 @@
 import React, { Component, createRef } from 'react';
 
 import './App.css';
+import './animation.css';
 import Formulaire from './components/formulaire/Formulaire';
 import Message from './components/message/Message';
 import base from './base';
-
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 const EMPTY_MESSAGES: any = {};
 
 class App extends Component {
@@ -14,14 +15,14 @@ class App extends Component {
     pseudo: this.internalProps.match.params.pseudo
   };
 
-  messageRef : any = createRef();
+  messageRef: any = createRef();
 
   componentDidMount() {
     base.syncState('/', { context: this, state: 'messages' });
   }
 
-  componentDidUpdate () {
-    const ref : any = this.messageRef.current;
+  componentDidUpdate() {
+    const ref: any = this.messageRef.current;
     ref.scrollTop = ref.scrollHeight;
   }
 
@@ -34,7 +35,7 @@ class App extends Component {
     this.setState({ messages: messages });
   };
 
-  isUser = (pseudo : string) => this.state.pseudo === pseudo;
+  isUser = (pseudo: string) => this.state.pseudo === pseudo;
 
   render() {
 
@@ -43,14 +44,16 @@ class App extends Component {
         <div>
 
           <div className="messages" ref={this.messageRef}>
-            <div className="message">
+            <TransitionGroup className="message">
 
               {Object.keys(this.state.messages).map((id) => {
                 return (
-                  <Message key={id} isUser={this.isUser} pseudo={this.state.messages[id].pseudo}>{this.state.messages[id].message}</Message>
+                  <CSSTransition key={id} timeout={200} classNames='fade'>
+                    <Message isUser={this.isUser} pseudo={this.state.messages[id].pseudo}>{this.state.messages[id].message}</Message>
+                  </CSSTransition>
                 )
               })}
-            </div>
+            </TransitionGroup>
           </div>
           <Formulaire
             pseudo={this.state.pseudo}
