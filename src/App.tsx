@@ -6,6 +6,7 @@ import Formulaire from './components/formulaire/Formulaire';
 import Message from './components/message/Message';
 import base from './base';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
 const EMPTY_MESSAGES: any = {};
 
 class App extends Component {
@@ -38,14 +39,11 @@ class App extends Component {
   isUser = (pseudo: string) => this.state.pseudo === pseudo;
 
   render() {
-
     return (
       <div className="box">
         <div>
-
           <div className="messages" ref={this.messageRef}>
             <TransitionGroup className="message">
-
               {Object.keys(this.state.messages).map((id) => {
                 return (
                   <CSSTransition key={id} timeout={200} classNames='fade'>
