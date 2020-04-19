@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/chat-box-react/precache-manifest.f739380aea8cd43847499208e20d3221.js"
+  "/chat-box-react/precache-manifest.ab065009f2727a36d2bff18f251532dd.js"
 );
 
 self.addEventListener('message', (event) => {

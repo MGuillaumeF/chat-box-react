@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fe4f4f020bde2f1a4d2b3c1f5b85c7e4",
+    "revision": "6401cd48c66d4c7383902119944bb1cf",
     "url": "/chat-box-react/index.html"
   },
   {
-    "revision": "fcbe1632b3ee17299142",
+    "revision": "cdbde6205bc8ae7b10b1",
     "url": "/chat-box-react/static/css/main.4bb1cd5d.chunk.css"
   },
   {
-    "revision": "2ee3bb82c15b42b26046",
-    "url": "/chat-box-react/static/js/2.4267630e.chunk.js"
+    "revision": "e0a87bbd289d2b26ba73",
+    "url": "/chat-box-react/static/js/2.cec51d85.chunk.js"
   },
   {
     "revision": "73138c634db8d37252cbabcb33689813",
-    "url": "/chat-box-react/static/js/2.4267630e.chunk.js.LICENSE.txt"
+    "url": "/chat-box-react/static/js/2.cec51d85.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fcbe1632b3ee17299142",
-    "url": "/chat-box-react/static/js/main.f28346a0.chunk.js"
+    "revision": "cdbde6205bc8ae7b10b1",
+    "url": "/chat-box-react/static/js/main.37fb2c0f.chunk.js"
   },
   {
     "revision": "d37e9f930d6537a32234",
