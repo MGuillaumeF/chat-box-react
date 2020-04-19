@@ -25,16 +25,19 @@ function App(props: IAppProps) {
       <div>
 
         <div className="messages">
-          {Object.keys(messages).map((id) => {
-            return (
-              <Message key={id}>{messages[id].message}</Message>
-            )
-          })}
+          <div className="message">
+
+            {Object.keys(messages).map((id) => {
+              return (
+                <Message key={id} pseudo={messages[id].pseudo}>{messages[id].message}</Message>
+              )
+            })}
+          </div>
         </div>
-        <Formulaire 
-        pseudo={pseudo} 
-        addMessage={addMessage} 
-        length={140}
+        <Formulaire
+          pseudo={pseudo}
+          addMessage={addMessage}
+          length={140}
         />
       </div>
     </div>
